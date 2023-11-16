@@ -556,10 +556,10 @@ Bug Fixes in This Version
 - Clang now prints unnamed members in diagnostic messages instead of giving an
   empty ''. Fixes
   (`#63759 <https://github.com/llvm/llvm-project/issues/63759>`_)
-- Fix crash in __builtin_strncmp and related builtins when the size value
-  exceeded the maximum value representable by int64_t. Fixes
+- Fix crash in ``__builtin_strncmp`` and related builtins when the size value
+  exceeded the maximum value representable by ``int64_t``. Fixes
   (`#64876 <https://github.com/llvm/llvm-project/issues/64876>`_)
-- Fixed an assertion if a function has cleanups and fatal erors.
+- Fixed an assertion if a function has cleanups and fatal errors.
   (`#48974 <https://github.com/llvm/llvm-project/issues/48974>`_)
 - Clang now emits an error if it is not possible to deduce array size for a
   variable with incomplete array type.
