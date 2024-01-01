@@ -63,7 +63,8 @@ template <class _Compare, class _Iter, class _Tp = typename iterator_traits<_Ite
 using __use_branchless_sort =
     integral_constant<bool,
                       __libcpp_is_contiguous_iterator<_Iter>::value && sizeof(_Tp) <= sizeof(void*) &&
-                          is_trivially_copyable<_Tp>::value && __is_simple_comparator<_Compare>::value>;
+                          is_trivially_copyable<_Tp>::value && is_copy_constructible<_Tp>::value &&
+                          is_copy_assignable<_Tp>::value && __is_simple_comparator<_Compare>::value>;
 
 namespace __detail {
 
