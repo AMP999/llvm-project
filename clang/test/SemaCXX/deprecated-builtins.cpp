@@ -17,3 +17,7 @@ void f() {
     a = __has_trivial_destructor(A);  // expected-warning-re {{__has_trivial_destructor {{.*}} use __is_trivially_destructible}}
 
 }
+
+void g(void) {
+    __has_nothrow_copy(); // expected-error {{expected a type}}
+}
